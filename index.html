@@ -96,5 +96,24 @@
             <button type="submit" class="btn">Order Now</button>
         </form>
     </section>    
+    <section id="reviews" class="container">
+        <h2>Customer Reviews</h2>
+        <form action="reviews.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea name="review" placeholder="Your Review" required></textarea>
+            <label for="rating">Rating: </label>
+            <select name="rating" required>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+            <button type="submit" class="btn">Submit Review</button>
+        </form>
+        <div class="reviews-list">
+            <!-- Review yang dikirim akan muncul di sini -->
+        </div>
+    </section>    
 </body>
 </html>
