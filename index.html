@@ -1,217 +1,85 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Website Pribadi</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #1e2a78;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        nav ul li a:hover {
-            background-color: #575757;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        section {
-            padding: 50px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
-        .profile, .skills, .projects, .contact {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-        }
-        .profile-text {
-            max-width: 600px;
-        }
-        .skills ul {
-            list-style: none;
-            padding: 0;
-        }
-        .skills ul li {
-            background-color: #f1f1f1;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .projects .card {
-            width: 30%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 15px;
-            background-color: white;
-            transition: transform 0.3s;
-        }
-        .projects .card:hover {
-            transform: scale(1.05);
-        }
-        .card img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #1e2a78;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #1e2a78;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #333;
-        }
-    </style>
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Selamat Datang di Website Pribadi Saya</h1>
-        <p>Hi, saya Adryan Nur Arif – Pengembang Web & Programmer</p>
+        <div class="container">
+            <h1>Coffee Bliss</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#profile">Tentang Saya</a></li>
-            <li><a href="#skills">Keahlian</a></li>
-            <li><a href="#projects">Proyek</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+    <section id="hero">
+        <div class="hero-text">
+            <h2>Welcome to Coffee Bliss</h2>
+            <p>Experience the best coffee in town, brewed with passion.</p>
+            <a href="#reservation" class="btn">Reserve a Table</a>
+        </div>
+    </section>
 
-    <div class="container">
-        <!-- Profile Section -->
-        <section id="profile">
-            <h2>Tentang Saya</h2>
-            <div class="profile">
-                <img src="profile-picture.jpg" alt="Foto Profil">
-                <div class="profile-text">
-                    <p>Nama saya Adryan Nur Arif, seorang pengembang web dan programmer dengan pengalaman dalam berbagai bahasa pemrograman seperti HTML, CSS, JavaScript, dan Python. Saya memiliki passion untuk membangun website yang modern dan menarik.</p>
-                </div>
+    <section id="menu" class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="images/coffee1.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>$2.50</p>
             </div>
-        </section>
+            <div class="menu-item">
+                <img src="images/coffee2.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>$3.50</p>
+            </div>
+            <!-- Tambahkan lebih banyak item menu -->
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Keahlian Saya</h2>
-            <div class="skills">
-                <ul>
-                    <li>HTML <span>★★★★☆</span></li>
-                    <li>CSS <span>★★★★☆</span></li>
-                    <li>JavaScript <span>★★★☆☆</span></li>
-                    <li>Python <span>★★★☆☆</span></li>
-                    <li>React <span>★★☆☆☆</span></li>
-                </ul>
-            </div>
-        </section>
+    <section id="reservation" class="container">
+        <h2>Reserve a Table</h2>
+        <form action="reserve.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="datetime-local" name="reservation_time" required>
+            <button type="submit" class="btn">Reserve Now</button>
+        </form>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Proyek Terbaru</h2>
-            <div class="projects">
-                <div class="card">
-                    <img src="project1.jpg" alt="Proyek 1">
-                    <h3>Proyek Website Portofolio</h3>
-                    <p>Membangun website portofolio dengan HTML, CSS, dan JavaScript.</p>
-                </div>
-                <div class="card">
-                    <img src="project2.jpg" alt="Proyek 2">
-                    <h3>Aplikasi Manajemen Tugas</h3>
-                    <p>Aplikasi berbasis web untuk manajemen tugas menggunakan React dan Node.js.</p>
-                </div>
-                <div class="card">
-                    <img src="project3.jpg" alt="Proyek 3">
-                    <h3>Blog Teknologi</h3>
-                    <p>Membangun platform blog teknologi sederhana dengan Python dan Flask.</p>
-                </div>
+    <section id="reviews" class="container">
+        <h2>Customer Reviews</h2>
+        <div class="reviews">
+            <div class="review">
+                <h3>John Doe</h3>
+                <p>Best coffee ever! Great service and ambiance.</p>
             </div>
-        </section>
+            <div class="review">
+                <h3>Jane Smith</h3>
+                <p>The cappuccino was perfect, will definitely come back!</p>
+            </div>
+            <!-- Tambahkan lebih banyak ulasan -->
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Kontak Saya</h2>
-            <div class="contact-form">
-                <form action="https://formspree.io/f/yourformid" method="POST">
-                    <input type="text" name="name" placeholder="Nama Anda" required>
-                    <input type="email" name="email" placeholder="Email Anda" required>
-                    <textarea name="message" placeholder="Pesan Anda" required></textarea>
-                    <button type="submit">Kirim Pesan</button>
-                </form>
-            </div>
-        </section>
-    </div>
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>Email: support@coffeebliss.com | Phone: +123 456 7890</p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Website Pribadi Saya. Semua Hak Dilindungi. Dibuat dengan semangat dan dedikasi.</p>
+        <p>&copy; 2024 Coffee Bliss. All Rights Reserved.</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
