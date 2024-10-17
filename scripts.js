@@ -17,3 +17,22 @@ const chatWindow = document.querySelector('.chat');
 liveChatHeader.addEventListener('click', () => {
     chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
 });
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+            {
+                title: 'Coffee Brewing Workshop',
+                start: '2024-10-22'
+            },
+            {
+                title: 'Live Music Night',
+                start: '2024-10-28'
+            }
+        ]
+    });
+
+    calendar.render();
+});
